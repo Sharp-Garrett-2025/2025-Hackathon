@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,8 +25,13 @@ public class PageManager : MonoBehaviour
         newChunk.GetComponent<BasicChunk>().StartChunk();
         newChunk.GetComponent<BasicChunk>().OnChunkEnded += () =>
         {
-
-            if(currentChunk >= chunks.Count - 1)
+            if (newChunk.tag == "Captcha" || newChunk.tag == "Ad")
+            {
+                displayedChunks.Remove(newChunk);
+                Destroy(newChunk); // Destroy the chunk GameObject to remove it from the game
+                UpdateContentSize();
+            }
+            if (currentChunk >= chunks.Count - 1)
             {
                 // If the last chunk is reached, do not add more
                 return;
