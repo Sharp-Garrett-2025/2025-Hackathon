@@ -3942,6 +3942,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Form1
       objectReference: {fileID: 0}
+    - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2030632482696925313}
+    - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnFormPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Form1, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3988,7 +4000,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicChunk: {fileID: 1748421094043380654}
   canContinue: 1
-  responseSheetObject: {fileID: 6531111524425414782, guid: d831b1ecfad2e9c41b79ef5eafa51d2f, type: 3}
   responseSheet: {fileID: 3003792494619717385, guid: d831b1ecfad2e9c41b79ef5eafa51d2f, type: 3}
   inputField1: {fileID: 4614021880947925673}
   inputField2: {fileID: 5954268381395575072}

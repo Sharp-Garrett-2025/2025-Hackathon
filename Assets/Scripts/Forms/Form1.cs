@@ -70,7 +70,7 @@ public class Form1 : AbstractForm
         Debug.Log(name);
         location = inputField2.text;
         Debug.Log(location);
-        //category = inputField3.text;
+        category = inputField3.text;
         //Debug.Log(category);
         if (hasPet == null)
         {
@@ -106,6 +106,7 @@ public class Form1 : AbstractForm
         AnswerCheck();
         if (canContinue)
         {
+            Debug.Log("Proceeding to the next chunk...");
             basicChunk.EndChunk();
         }
         else
