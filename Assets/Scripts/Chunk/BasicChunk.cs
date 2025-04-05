@@ -7,6 +7,8 @@ public class BasicChunk : MonoBehaviour
 {
     public event Action OnChunkEnded;
 
+    public GameObject nextButton;
+
     public void StartChunk()
     {
         // This method is called when the chunk is created
@@ -18,5 +20,6 @@ public class BasicChunk : MonoBehaviour
         // This method is called when the chunk is destroyed
         // You can clean up your chunk here
         OnChunkEnded?.Invoke();
+        nextButton.SetActive(false);
     }
 }
