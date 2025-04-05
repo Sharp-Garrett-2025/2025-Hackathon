@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Barrier
   - FallingObject
+  - Captcha
+  - Form
+  - Ad
   layers:
   - Default
   - TransparentFX
