@@ -9,6 +9,8 @@ public class BasicChunk : MonoBehaviour
 
     public GameObject nextButton;
 
+    
+
     public void StartChunk()
     {
         // This method is called when the chunk is created

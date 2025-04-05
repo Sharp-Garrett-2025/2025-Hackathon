@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 300}
+  m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3674631026130954739
 CanvasRenderer:
@@ -112,8 +112,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 106.7992, y: -3.0656}
-  m_SizeDelta: {x: 115.3359, y: 115.3375}
+  m_AnchoredPosition: {x: 69.9, y: -1.6}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6935628195308524113
 CanvasRenderer:
@@ -209,6 +209,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7820224658987765171}
+        m_TargetAssemblyTypeName: Captia1, Assembly-CSharp
+        m_MethodName: OnCaptiaPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1701360905090851785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +246,18 @@ PrefabInstance:
     - target: {fileID: 2934933374713359611, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       propertyPath: m_Name
       value: Captia
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7820224658987765171}
+    - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNextPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BasicCaptia, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6481100624843936191, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       propertyPath: m_Pivot.x
@@ -333,8 +357,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6481100624843936191, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6968684822520377333}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2934933374713359611, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7820224658987765171}
   m_SourcePrefab: {fileID: 100100000, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+--- !u!1 &1498116349841395742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2934933374713359611, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+  m_PrefabInstance: {fileID: 4355150957814365413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7820224658987765171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498116349841395742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b042be83337836e48bc0ce0e72180af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chunk: {fileID: 0}
+  canContinue: 0
 --- !u!224 &7314378055766027610 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6481100624843936191, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
