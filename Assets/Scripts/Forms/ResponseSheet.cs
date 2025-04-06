@@ -5,10 +5,21 @@ using UnityEngine;
 public class ResponseSheet : MonoBehaviour
 {
     public string Name;
-    public bool? hasPet;
-    public bool? travelThroughEconomicZone;
-    public string category;
-    public string location;
+    public bool? hasPet = null;
+    public bool? travelThroughEconomicZone= null;
+    public bool? hasQuantum= null;
+    public bool? glacticData= null;
+    public bool? temporalInformation= null;
+    public bool? fabricManipulator = null;
+    public bool? quantumTaxEvasion = null;
+    public bool? legalEntityBinding = null;
+    public bool? pocketHoleTaxes = null;
+    public bool? catGirlGambling = null;
+    public bool? lieTaxes = null;
+
+    public string category= "";
+    public string location = "";
+    public string demensionalEntity = "";
 
     public static ResponseSheet instance { get; private set;}
 
