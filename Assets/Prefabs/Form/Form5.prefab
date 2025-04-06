@@ -678,6 +678,10 @@ PrefabInstance:
       value: Form5
       objectReference: {fileID: 0}
     - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2548382833586201916}
@@ -736,6 +740,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2548382833586201916}
   m_SourcePrefab: {fileID: 100100000, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+--- !u!114 &2012480405575151580 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1191954431662739639, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+  m_PrefabInstance: {fileID: 821740328804974443}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358370691282294996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0567ed576fbef0e4d8cee16c6d329d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2827330514245375758 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3196388495799068773, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
@@ -760,7 +775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   responseSheet: {fileID: 0}
   textObjects: []
-  basicChunk: {fileID: 0}
+  basicChunk: {fileID: 2012480405575151580}
   canContinue: 0
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   passPoints: 0
@@ -2337,7 +2352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6388126910144383509, guid: db009c4c28f088e4d98fb4a64b13bda3, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6388126910144383509, guid: db009c4c28f088e4d98fb4a64b13bda3, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target

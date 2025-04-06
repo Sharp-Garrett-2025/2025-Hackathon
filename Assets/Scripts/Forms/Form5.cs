@@ -19,6 +19,7 @@ public class Form5 : AbstractForm
     public bool? lieTaxes = null;
     public bool? demensionEnt= null;
     public int passPoints = 0;
+    public int maxPassPoints;
 
     public ToggleGroup petToggleGroup;
     public ToggleGroup travelToggleGroup;
@@ -43,6 +44,7 @@ public class Form5 : AbstractForm
             responseSheet = GameObject.Find("ResponseSheet").GetComponent<ResponseSheet>();
         defaultColor = clickFruadImage.color;
         canContinue = false;
+        maxPassPoints = Random.Range(4, 9);
     }
 
     string category = "";
@@ -135,27 +137,6 @@ public class Form5 : AbstractForm
             canContinue = true;
         }
 
-        if (this.hasPet != responseSheet.hasPet)
-        {
-            canContinue = false;
-            petToggleGroup.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().color = Color.red;
-            petToggleGroup.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().color = Color.red;
-
-        }
-        if (this.travelThroughEconomicZone != responseSheet.travelThroughEconomicZone)
-        {
-            canContinue = false;
-            travelToggleGroup.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().color = Color.red;
-            travelToggleGroup.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().color = Color.red;
-        }
-
-        if (this.hasQuantum != responseSheet.hasQuantum)
-        {
-            canContinue = false;
-            quantumToggleGroup.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().color = Color.red;
-            quantumToggleGroup.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().color = Color.red;
-        }
-
         if (this.clickFruad != responseSheet.clickFruad)
         {
             canContinue = false;
@@ -216,7 +197,7 @@ public class Form5 : AbstractForm
         {
             canContinue = false;
         }
-        if (passPoints == 5)
+        if (passPoints == maxPassPoints )
         {
             canContinue = true;
         }
