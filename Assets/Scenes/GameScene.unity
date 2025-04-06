@@ -190,10 +190,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3184033169509619650, guid: 77fd508cce9f6f14bb1690d00f0ef565, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4640547520959553236, guid: 77fd508cce9f6f14bb1690d00f0ef565, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -210,22 +206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelContainer
       objectReference: {fileID: 0}
-    - target: {fileID: 7371571872919769060, guid: 77fd508cce9f6f14bb1690d00f0ef565, type: 3}
-      propertyPath: chunks.Array.size
-      value: 7
+    - target: {fileID: 7068781245432896465, guid: 77fd508cce9f6f14bb1690d00f0ef565, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7371571872919769060, guid: 77fd508cce9f6f14bb1690d00f0ef565, type: 3}
-      propertyPath: chunks.Array.data[0]
-      value: 
-      objectReference: {fileID: 6559119972593245501, guid: 0cd42441d17961142a19873791d23c01, type: 3}
-    - target: {fileID: 7371571872919769060, guid: 77fd508cce9f6f14bb1690d00f0ef565, type: 3}
-      propertyPath: chunks.Array.data[5]
-      value: 
-      objectReference: {fileID: 4770001066248899249, guid: 62342b4e32402cc44a3129ce9b5927e3, type: 3}
-    - target: {fileID: 7371571872919769060, guid: 77fd508cce9f6f14bb1690d00f0ef565, type: 3}
-      propertyPath: chunks.Array.data[6]
-      value: 
-      objectReference: {fileID: 2934933374713359611, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
