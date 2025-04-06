@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,10 +16,15 @@ public class PageManager : MonoBehaviour
 
     public GameObject gameCamera;
 
+    public FadeTransition gameTransition;
+    public FadeTransition finalTransition;
+
     private void Start()
     {
-        AddChunk(chunks[currentChunk]); // Add an initial chunk on start
         finalScreen.SetActive(false); // Hide the final screen at the start
+        gameTransition.canvasGroup.alpha = 1;
+        gameTransition.FadeIn(); // Add fade in on start
+        AddChunk(chunks[currentChunk]); // Add an initial chunk on start
     }
 
     // Method to add a chunk to the list and update the webpage
@@ -38,11 +44,7 @@ public class PageManager : MonoBehaviour
             }
             if (currentChunk >= chunks.Count)
             {
-                // If the last chunk is reached, do not add more
-                // Show the final screen
-                finalScreen.SetActive(true);
-                finalScreen.GetComponent<FinalCalculations>().OnFinalStart(); // Call the final calculations
-                gameCamera.SetActive(false); // Hide the game camera
+                FinishGame();
                 return;
             }
             AddChunk(chunks[currentChunk]); // Add a new chunk when the current one ends
@@ -64,8 +66,20 @@ public class PageManager : MonoBehaviour
 
     public void FinishGame()
     {
-        // This method can be called when the game is finished
-        // You can add any additional logic here, such as showing a final screen or resetting the game
+        // If the last chunk is reached, do not add more
+        // Show the final screen
+        StartCoroutine(FadeToFinalScreen());
+    }
+
+    private IEnumerator FadeToFinalScreen()
+    {
+        gameTransition.FadeOut();
+        yield return new WaitForSeconds(gameTransition.fadeDuration);
+        finalTransition.canvasGroup.alpha = 1;
+        finalScreen.SetActive(true);
+        finalScreen.GetComponent<FinalCalculations>().OnFinalStart(); // Call the final calculations
+        gameCamera.SetActive(false); // Hide the game camera
+        finalTransition.FadeIn();
         Debug.Log("Game Finished!");
     }
 }

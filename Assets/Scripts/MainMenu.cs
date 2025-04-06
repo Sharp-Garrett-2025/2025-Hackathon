@@ -18,10 +18,13 @@ public class MainMenu : MonoBehaviour
 
     public bool interuptStarted = false;
 
+    // Reference to the fade transition animator
+    public FadeTransition fadeTransition;
+
     // Function to load a scene
     public void LoadScene()
     {
-        SceneManager.LoadScene("GameScene");
+        StartCoroutine(FadeAndLoadScene("GameScene"));
     }
 
     // Function to exit the game
@@ -55,7 +58,7 @@ public class MainMenu : MonoBehaviour
     IEnumerator WaitAndPlayNextTrack()
     {
         yield return new WaitForSeconds(waitTime);
-        if(backgroundMusic != null)
+        if (backgroundMusic != null)
         {
             yield break;
         }
@@ -70,5 +73,18 @@ public class MainMenu : MonoBehaviour
         backgroundMusic.clip = musicTracks[currentTrackIndex];
         backgroundMusic.Play();
         interuptStarted = false;
+    }
+
+    // Coroutine to handle scene fade transition and loading
+    IEnumerator FadeAndLoadScene(string sceneName)
+    {
+        fadeTransition.FadeOut();
+        yield return new WaitForSeconds(1.0f); // Adjust the duration to match the fade out animation
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }
