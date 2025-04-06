@@ -19,6 +19,8 @@ public class PageManager : MonoBehaviour
     public FadeTransition gameTransition;
     public FadeTransition finalTransition;
 
+    public AudioSource soundObject;
+
     private void Start()
     {
         finalScreen.SetActive(false); // Hide the final screen at the start
@@ -80,6 +82,7 @@ public class PageManager : MonoBehaviour
         finalScreen.GetComponent<FinalCalculations>().OnFinalStart(); // Call the final calculations
         gameCamera.SetActive(false); // Hide the game camera
         finalTransition.FadeIn();
+        soundObject.Play();
         Debug.Log("Game Finished!");
     }
 }
