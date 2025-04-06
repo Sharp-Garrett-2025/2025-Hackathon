@@ -11,10 +11,13 @@ public class FinalCalculations : MonoBehaviour
     public TMP_Text location;
     public TMP_Text score;
     public TMP_Text employmentStatus;
+    public TMP_Text returnAmount;
 
     public TMP_Text fact1;
     public TMP_Text fact2;
     public TMP_Text fact3;
+
+    public TMP_Text ending;
 
     public List<GameObject> Ranks;
 
@@ -104,7 +107,8 @@ public class FinalCalculations : MonoBehaviour
     void getScore()
     {
         // Calculate the score based on the responses
-        int scoreValue = 100;
+        int sub = responses.errorCount * 5;
+        int scoreValue = 100 - sub;
         if(responses.lieTaxes == true)
         {
             scoreValue -= 50;
@@ -117,7 +121,9 @@ public class FinalCalculations : MonoBehaviour
         {
             scoreValue += 50;
         }
-        score.text = scoreValue.ToString();
+        score.text = scoreValue.ToString() + "%";
+        scoreValue = scoreValue * 13;
+        returnAmount.text = "$" + scoreValue.ToString();
     }
 
     void getRank()
@@ -144,6 +150,29 @@ public class FinalCalculations : MonoBehaviour
         {
             Ranks[4].SetActive(true);
         }
+        string endingType;
+        if(scoreValue>= 70)
+        {
+            endingType = "Big Ballin";
+        }
+        else if (scoreValue >= 50)
+        {
+            endingType = "Whatever";
+        }
+        else if (scoreValue >= 30)
+        {
+            endingType = "Jail";
+        }
+        else if (scoreValue >= 10)
+        {
+            endingType = "Gooner";
+        }
+        else
+        {
+            endingType = "Jail";
+        }
+
+        ending.text = "You have unlocked the <i>" + endingType + "</i> ending";
     }
 
     void getFacts()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -15,6 +16,7 @@ public class BasicCaptia : MonoBehaviour
 
     public GameObject soundObject;
 
+    public static event Action OnNextFailed;
     private void Awake()
     {
         chunk = GetComponent<BasicChunk>();
@@ -45,6 +47,7 @@ public class BasicCaptia : MonoBehaviour
         {
             Debug.Log("Please complete the current chunk before proceeding.");
             errorObject.SetActive(true);
+            OnNextFailed?.Invoke();
         }
     }
 }
