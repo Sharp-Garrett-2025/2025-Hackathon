@@ -1043,9 +1043,11 @@ MonoBehaviour:
   location: {fileID: 3614367797524526908}
   score: {fileID: 5852672734070118591}
   employmentStatus: {fileID: 5439135504184633790}
+  returnAmount: {fileID: 5334690063770007867}
   fact1: {fileID: 6670264739949960951}
   fact2: {fileID: 2965241826724893182}
   fact3: {fileID: 8213917782304797457}
+  ending: {fileID: 2699968596701348071}
   Ranks:
   - {fileID: 4091103393996056801}
   - {fileID: 4091103393996056801}

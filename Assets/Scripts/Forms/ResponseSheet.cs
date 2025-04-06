@@ -21,6 +21,8 @@ public class ResponseSheet : MonoBehaviour
     public string location = "";
     public string demensionalEntity = "";
 
+    public int errorCount = 0;
+
     public static ResponseSheet instance { get; private set;}
 
     private void Awake()
@@ -37,7 +39,11 @@ public class ResponseSheet : MonoBehaviour
         }
     }
 
-
+    public void OnEnable()
+    {
+        // Subscribe to the event
+        BasicCaptia.OnNextFailed += () => errorCount++;
+    }
     // Start is called before the first frame update
     void Start()
     {

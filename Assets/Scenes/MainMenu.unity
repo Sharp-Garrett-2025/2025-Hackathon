@@ -1493,13 +1493,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 1214665859}
-  musicTracks:
-  - {fileID: 8300000, guid: a0c6e47508cf46c468b8356041de1444, type: 3}
-  - {fileID: 8300000, guid: fa0abf4ea78936b40857ebb2398f9d6a, type: 3}
-  - {fileID: 8300000, guid: 0b64a4a156df8ab4b9e6de451f70e434, type: 3}
-  - {fileID: 8300000, guid: 6589aeda05024c04a9734e50bfbc3358, type: 3}
-  - {fileID: 8300000, guid: bcb157ecac65e344a88ca3ecb4987074, type: 3}
-  - {fileID: 8300000, guid: dfd8495b76822c34ba56144e4077a296, type: 3}
   waitTime: 5
   interuptStarted: 0
   fadeTransition: {fileID: 2090666974}
@@ -1532,7 +1525,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
