@@ -10,13 +10,20 @@ public class Form2 : AbstractForm
     public ToggleGroup dataGroup;
     public ToggleGroup clickFruadGroup;
     public ToggleGroup entityGroup;
+    public Image clickFruadImage;
     public string demensionalEntity;
     public bool? multiDimensionalEntity;
     public bool? clickFruad;
     // Start is called before the first frame update
     void Start()
     {
+        if (responseSheet == null)
+            responseSheet = GameObject.Find("ResponseSheet").GetComponent<ResponseSheet>();
+        defaultColor = clickFruadImage.color;
         canContinue = false;
+        multiDimensionalEntity = null;
+        clickFruad = null;
+        demensionalEntity = "";
 
     }
 
@@ -34,8 +41,6 @@ public class Form2 : AbstractForm
         TestYesOrNo(value, entityGroup);
         multiDimensionalEntity = value;
     }
-
-
 
     public override void AnswerCheck()
     {
@@ -57,6 +62,9 @@ public class Form2 : AbstractForm
         }
         else
         {
+            responseSheet.demensionalEntity = demensionalEntity;
+            responseSheet.clickFruad = clickFruad;
+            responseSheet.demensionalEntity = demensionalEntity;
             canContinue = true;
         }
     }

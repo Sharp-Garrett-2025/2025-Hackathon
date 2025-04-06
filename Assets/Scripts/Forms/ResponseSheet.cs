@@ -7,8 +7,8 @@ public class ResponseSheet : MonoBehaviour
     public string Name;
     public bool? hasPet = null;
     public bool? travelThroughEconomicZone= null;
-    public bool? hasQuantum= null;
-    public bool? glacticData= null;
+    public bool? hasQuantum = null;
+    public bool? clickFruad = null;
     public bool? temporalInformation= null;
     public bool? fabricManipulator = null;
     public bool? quantumTaxEvasion = null;
