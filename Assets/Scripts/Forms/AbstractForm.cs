@@ -6,7 +6,7 @@ using TMPro;
 public abstract class AbstractForm : MonoBehaviour
 {
     public abstract void  AnswerCheck();
-
+    public List<GameObject> textObjects;
     public BasicChunk basicChunk;
     public bool canContinue = false;
     // Start is called before the first frame update
@@ -24,8 +24,10 @@ public abstract class AbstractForm : MonoBehaviour
 
     public virtual void OnFormPressed()
     {
+        AnswerCheck();
         if (canContinue)
         {
+            Debug.Log("Form Passed");
             basicChunk.EndChunk();
         }
         else
