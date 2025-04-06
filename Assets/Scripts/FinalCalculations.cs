@@ -96,7 +96,7 @@ public class FinalCalculations : MonoBehaviour
             userName.text = "Name: " + responses.Name;
             location.text = responses.location;
             //score.text = pageManagerInstance.score;
-            //employmentStatus.text = responses.employmentStatus;
+            employmentStatus.text = responses.job;
 
             //fact1.text = pageManagerInstance.fact1;
             //fact2.text = pageManagerInstance.fact2;
