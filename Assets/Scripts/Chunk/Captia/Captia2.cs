@@ -51,6 +51,7 @@ public class Captia2 : BasicCaptia
                 Debug.Log("Correct pattern!");
                 canContinue = true;
                 errorObject.SetActive(false);
+                pictureCaptia.SetActive(false);
             }
             else
             {

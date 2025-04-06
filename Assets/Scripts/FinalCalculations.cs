@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class FinalCalculations : MonoBehaviour
 {
     private ResponseSheet responses;
@@ -58,7 +59,14 @@ public class FinalCalculations : MonoBehaviour
             "You drink your coffee black",
             "You do not make a lot of money",
             "You did not take taxes seriously",
-            "You did not eat breakfast today"
+            "You did not eat breakfast today",
+            "You slept over 10 hours yesterday",
+            "You really enjoy naps",
+            "You have a heart of stone",
+            "The work you do is mysterious and important",
+            "Please enjoy all facts equally",
+            "I'm in",
+            "You haven't washed your bed sheets in a while"
 
         };
         responses = FindObjectOfType<ResponseSheet>();
@@ -82,7 +90,7 @@ public class FinalCalculations : MonoBehaviour
     {
         if (responses != null)
         {
-            userName.text = responses.Name;
+            userName.text = "Name: " + responses.Name;
             //location.text = responses.location;
             //score.text = pageManagerInstance.score;
             //employmentStatus.text = responses.employmentStatus;
@@ -156,5 +164,10 @@ public class FinalCalculations : MonoBehaviour
         fact1.text = selectedFacts[0];
         fact2.text = selectedFacts[1];
         fact3.text = selectedFacts[2];
+    }
+
+    public void ExitToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
