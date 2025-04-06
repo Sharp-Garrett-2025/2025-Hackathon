@@ -94,7 +94,7 @@ public class FinalCalculations : MonoBehaviour
         if (responses != null)
         {
             userName.text = "Name: " + responses.Name;
-            //location.text = responses.location;
+            location.text = responses.location;
             //score.text = pageManagerInstance.score;
             //employmentStatus.text = responses.employmentStatus;
 
@@ -107,7 +107,7 @@ public class FinalCalculations : MonoBehaviour
     void getScore()
     {
         // Calculate the score based on the responses
-        int sub = responses.errorCount * 5;
+        int sub = responses.errorCount * 5 + Random.Range(3,35);
         int scoreValue = 100 - sub;
         if(responses.lieTaxes == true)
         {
@@ -117,10 +117,6 @@ public class FinalCalculations : MonoBehaviour
         {
             scoreValue -= 5;
         }
-        if(responses.demensionalEntity == "The Galactic Data Syndicate")
-        {
-            scoreValue += 50;
-        }
         score.text = scoreValue.ToString() + "%";
         scoreValue = scoreValue * 13;
         returnAmount.text = "$" + scoreValue.ToString();
@@ -128,8 +124,9 @@ public class FinalCalculations : MonoBehaviour
 
     void getRank()
     {
+        int sub = responses.errorCount * 5 + Random.Range(3, 35);
+        int scoreValue = 100 - sub;
         // Calculate the rank based on the score
-        int scoreValue = int.Parse(score.text);
         if (scoreValue >= Random.Range(70, 100))
         {
             Ranks[0].SetActive(true);
