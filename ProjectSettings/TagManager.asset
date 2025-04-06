@@ -55,3 +55,6 @@ TagManager:
   - name: MenuText
     uniqueID: 3125734477
     locked: 0
+  - name: Fade
+    uniqueID: 1910828751
+    locked: 0

@@ -45,5 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  category: 23
-  location: West Wendover
+  category: 2M
+  location: awd
+  demensionalEntity: 
