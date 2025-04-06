@@ -1078,16 +1078,36 @@ PrefabInstance:
       value: Captcha
       objectReference: {fileID: 0}
     - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3925051960607141986}
+    - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 770998224780919742}
     - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnNextPressed
       objectReference: {fileID: 0}
     - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BasicCaptia, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6481100624843936191, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       propertyPath: m_Pivot.x
@@ -1198,6 +1218,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3925051960607141986}
   m_SourcePrefab: {fileID: 100100000, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+--- !u!82 &770998224780919742 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6934323123495658996, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+  m_PrefabInstance: {fileID: 7676536098276402762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3709266552287721461 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6481100624843936191, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
@@ -1224,6 +1249,7 @@ MonoBehaviour:
   errorText: {fileID: 90243077045422664}
   chunk: {fileID: 0}
   canContinue: 0
+  soundObject: {fileID: 1834465861990919167, guid: 40ec437627e3eae4a9e37a88b9f1a72a, type: 3}
   checkPatternButton: {fileID: 6211326036782063057}
   textCaptcha: {fileID: 7758635793864425217}
   robotButton: {fileID: 1499030986824598000}

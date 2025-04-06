@@ -13,6 +13,8 @@ public class BasicCaptia : MonoBehaviour
 
     public bool canContinue = false;
 
+    public GameObject soundObject;
+
     private void Awake()
     {
         chunk = GetComponent<BasicChunk>();
@@ -31,6 +33,7 @@ public class BasicCaptia : MonoBehaviour
 
     public void OnNextPressed()
     {
+        Instantiate(soundObject, transform.parent.GetComponentInParent<RectTransform>());
         if (canContinue)
         {
             // Logic to proceed to the next chunk
