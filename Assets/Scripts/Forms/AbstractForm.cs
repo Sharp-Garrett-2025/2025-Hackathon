@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public abstract class AbstractForm : MonoBehaviour
 {
     public abstract void  AnswerCheck();
+    public ResponseSheet responseSheet;
     public List<GameObject> textObjects;
     public BasicChunk basicChunk;
     public bool canContinue = false;

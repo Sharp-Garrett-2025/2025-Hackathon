@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Form1 : AbstractForm
 {
-    public ResponseSheet responseSheet;
     public TMP_InputField inputField1;
     public TMP_InputField inputField2;
     public ToggleGroup petToggleGroup;
