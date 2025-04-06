@@ -199,7 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ca1dc13e4b6d534fab47a27c0569328, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6624504c397e3144e95bd14375c0f20a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -822,8 +822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: 125}
-  m_SizeDelta: {x: 660, y: 300}
+  m_AnchoredPosition: {x: 0, y: 121}
+  m_SizeDelta: {x: 567, y: 148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &344618343281536748
 PrefabInstance:
@@ -1071,7 +1071,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2934933374713359611, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       propertyPath: m_Name
-      value: Captcha3
+      value: Captcha4
       objectReference: {fileID: 0}
     - target: {fileID: 2934933374713359611, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       propertyPath: m_TagString
@@ -1228,5 +1228,5 @@ MonoBehaviour:
   textCaptcha: {fileID: 7758635793864425217}
   robotButton: {fileID: 1499030986824598000}
   robotObject: {fileID: 3268332118362004023}
-  correctString: mdx8n7
+  correctString: YR890
   inputField: {fileID: 7895453365277437004}
