@@ -9,13 +9,14 @@ public class Form1 : AbstractForm
     public ResponseSheet responseSheet;
     public TMP_InputField inputField1;
     public TMP_InputField inputField2;
-    public TMP_InputField inputField3;
     public ToggleGroup petToggleGroup;
     public ToggleGroup travelToggleGroup;
     public ToggleGroup categoryToggleGroup;
-    public Color defaultColor;
+    public ToggleGroup quantumToggleGroup;
+
     public bool? hasPet = null;
     public bool? travelThroughEconomicZone = null;
+    public bool? quantum = null;
     public Image yesPet;
     public Image noPet;
     public string userName;
@@ -32,51 +33,34 @@ public class Form1 : AbstractForm
         Debug.Log("Cancontinue: " + canContinue);
     }
 
-    public void ChangePetVarible(bool value)
+    public void TravelThroughEconomicZone(bool value)
     {
-        hasPet = value;
-        Debug.Log("Has a pet:" + hasPet);
-        if (hasPet == true)
-        {
-            yesPet.color = Color.green;
-            noPet.color = defaultColor;
-        }
-        else
-        {
-            noPet.color = Color.red;
-            yesPet.color = defaultColor;
-        }
-
-    }
-
-    public void ChangeTravelThroughEconomicZone(bool value)
-    {
+        TestYesOrNo(value, travelToggleGroup);
         travelThroughEconomicZone = value;
-        if (travelThroughEconomicZone == true)
-        {
-            travelToggleGroup.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().color = Color.green;
-            travelToggleGroup.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().color = defaultColor;
-        }
-        else
-        {
-            travelToggleGroup.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().color = Color.red;
-            travelToggleGroup.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().color = defaultColor;
-        }
-        Debug.Log("Travel through economic zone:" + travelThroughEconomicZone);
     }
+
+    public void PetToggleGroup(bool value)
+    {
+        TestYesOrNo(value, petToggleGroup);
+        hasPet = value;
+    }
+
+    public void QuantumToggleGroup(bool value)
+    {
+        TestYesOrNo(value, quantumToggleGroup);
+        quantum = value;
+    }
+
+    public void CategoryToggleGroup(string value)
+    {
+        category = value;
+    }
+
     public override void AnswerCheck()
     {
         name = inputField1.text;
-        Debug.Log(name);
         location = inputField2.text;
-        Debug.Log(location);
-        category = inputField3.text;
-        //Debug.Log(category);
         if (hasPet == null)
-        {
-            canContinue = false;
-        }
-        else if (inputField1.text == "" || inputField2.text == "" || inputField3.text == "")
         {
             canContinue = false;
         }
@@ -84,7 +68,15 @@ public class Form1 : AbstractForm
         {
             canContinue = false;
         }
+        else if (quantum == null)
+        {
+            canContinue = false;
+        }
         else if (category == "")
+        {
+            canContinue = false;
+        }
+        else if (inputField1.text == "" || inputField2.text == "")
         {
             canContinue = false;
         }
@@ -95,11 +87,11 @@ public class Form1 : AbstractForm
             responseSheet.location = this.location;
             responseSheet.hasPet = this.hasPet;
             responseSheet.travelThroughEconomicZone = this.travelThroughEconomicZone;
+            responseSheet.hasQuantum = this.quantum;
             canContinue = true;
         }
 
     }
-
 
     public override void OnFormPressed()
     {
