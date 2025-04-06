@@ -15,7 +15,6 @@ public class Captcha3 : BasicCaptia
 
     new void Start()
     {
-        correctString = "mdx8n7"; 
         checkPatternButton.onClick.AddListener(CheckPattern);
         robotButton.onClick.AddListener(EnableTextCaptcha);
         textCaptcha.SetActive(false);
