@@ -10,27 +10,27 @@ public class Form4 : AbstractForm
     public ToggleGroup taxGroup;
     public ToggleGroup soulGroup;
     public ToggleGroup iAmGroup;
-    bool? fact1 = null;
-    bool? fact2 = null;
-    bool? fact3 = null;
+    bool? quantumTaxEvasion = null;
+    bool? fabricManipulator = null;
+    bool? legalEntityBinding = null;
     public float quantCoin, spaceValue, eldritchValue, demonicValue;
 
     public void TaxGroup(bool value)
     {
         TestYesOrNo(value, taxGroup);
-        fact1 = value;
+        quantumTaxEvasion = value;
     }
 
     public void SoulGroup(bool value)
     {
         TestYesOrNo(value, soulGroup);
-        fact2 = value;
+        fabricManipulator = value;
     }
 
     public void IAmGroup(bool value)
     {
         TestYesOrNo(value, iAmGroup);
-        fact3 = value;
+        legalEntityBinding = value;
     }
 
 
@@ -38,6 +38,8 @@ public class Form4 : AbstractForm
     // Start is called before the first frame update
     void Start()
     {
+        if (responseSheet == null)
+            responseSheet = GameObject.Find("ResponseSheet").GetComponent<ResponseSheet>();
         defaultColor = coinImage.color;
         canContinue = false;
         quantCoin = 0.0f;
@@ -74,15 +76,15 @@ public class Form4 : AbstractForm
             image.color = Color.red;
             canContinue = false;
         }
-        else if (fact1 == null)
+        else if (quantumTaxEvasion == null)
         {
             canContinue = false;
         }
-        else if (fact2 == null)
+        else if (fabricManipulator  == null)
         {
             canContinue = false;
         }
-        else if (fact3 == null)
+        else if (legalEntityBinding == null)
         {
             canContinue = false;
         }
@@ -102,6 +104,9 @@ public class Form4 : AbstractForm
             image.color = Color.green;
             image = textObjects[4].GetComponent<Image>();
             image.color = Color.green;
+            this.responseSheet.quantumTaxEvasion = this.quantumTaxEvasion;
+            this.responseSheet.fabricManipulator = this.fabricManipulator;
+            this.responseSheet.legalEntityBinding = this.legalEntityBinding;
             canContinue = true;
         }
 
