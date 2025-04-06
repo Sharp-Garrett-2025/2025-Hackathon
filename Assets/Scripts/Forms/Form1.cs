@@ -58,7 +58,7 @@ public class Form1 : AbstractForm
 
     public override void AnswerCheck()
     {
-        name = inputField1.text;
+        userName = inputField1.text;
         location = inputField2.text;
         if (hasPet == null)
         {
@@ -82,7 +82,7 @@ public class Form1 : AbstractForm
         }
         else
         {
-            responseSheet.name = this.name;
+            responseSheet.Name = this.userName;
             responseSheet.category = this.category;
             responseSheet.location = this.location;
             responseSheet.hasPet = this.hasPet;

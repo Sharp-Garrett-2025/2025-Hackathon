@@ -19,6 +19,7 @@ public class ResponseSheet : MonoBehaviour
 
     public string category= "";
     public string location = "";
+    public string job = "";
     public string demensionalEntity = "";
 
     public int errorCount = 0;

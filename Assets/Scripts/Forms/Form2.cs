@@ -65,6 +65,8 @@ public class Form2 : AbstractForm
             responseSheet.clickFruad = this.clickFruad;
             responseSheet.temporalInformation = this.temporalInformation;
             responseSheet.demensionalEntity = this.demensionalEntity;
+            var textComponent = textObjects[4].GetComponent<TMP_InputField>();
+            responseSheet.job = textComponent.text;
             canContinue = true;
         }
     }
