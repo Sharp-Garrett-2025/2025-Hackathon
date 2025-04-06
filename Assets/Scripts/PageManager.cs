@@ -11,9 +11,14 @@ public class PageManager : MonoBehaviour
     private int currentChunk = 0;
     private List<GameObject> displayedChunks = new List<GameObject>();
 
+    public GameObject finalScreen; // The final screen GameObject
+
+    public GameObject gameCamera;
+
     private void Start()
     {
         AddChunk(chunks[currentChunk]); // Add an initial chunk on start
+        finalScreen.SetActive(false); // Hide the final screen at the start
     }
 
     // Method to add a chunk to the list and update the webpage
@@ -31,9 +36,13 @@ public class PageManager : MonoBehaviour
                 Destroy(newChunk); // Destroy the chunk GameObject to remove it from the game
                 UpdateContentSize();
             }
-            if (currentChunk >= chunks.Count - 1)
+            if (currentChunk >= chunks.Count)
             {
                 // If the last chunk is reached, do not add more
+                // Show the final screen
+                finalScreen.SetActive(true);
+                finalScreen.GetComponent<FinalCalculations>().OnFinalStart(); // Call the final calculations
+                gameCamera.SetActive(false); // Hide the game camera
                 return;
             }
             AddChunk(chunks[currentChunk]); // Add a new chunk when the current one ends
@@ -51,5 +60,12 @@ public class PageManager : MonoBehaviour
     {
         // Force the content to update its size
         LayoutRebuilder.ForceRebuildLayoutImmediate(content.GetComponent<RectTransform>());
+    }
+
+    public void FinishGame()
+    {
+        // This method can be called when the game is finished
+        // You can add any additional logic here, such as showing a final screen or resetting the game
+        Debug.Log("Game Finished!");
     }
 }
