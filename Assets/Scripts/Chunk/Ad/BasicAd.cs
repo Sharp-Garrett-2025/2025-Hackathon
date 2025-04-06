@@ -11,11 +11,18 @@ public class BasicAd : MonoBehaviour
 
     public bool canContinue = false;
     public float skipTime = 5.0f;
+    public bool startAtRandomPoint = false; // New variable
 
     private void Awake()
     {
         chunk = GetComponent<BasicChunk>();
         rendererGameObject.SetActive(true);
+
+        if (startAtRandomPoint && videoPlayer != null)
+        {
+            long randomFrame = (long)Random.Range(0, videoPlayer.frameCount);
+            videoPlayer.frame = randomFrame;
+        }
     }
 
     void Update()

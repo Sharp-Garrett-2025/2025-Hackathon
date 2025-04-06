@@ -551,4 +551,5 @@ MonoBehaviour:
   chunk: {fileID: 0}
   canContinue: 0
   skipTime: 20
+  startAtRandomPoint: 1
   skipButton: {fileID: 1959072866210613985}
