@@ -3508,7 +3508,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   responseSheet: {fileID: 3003792494619717385, guid: d831b1ecfad2e9c41b79ef5eafa51d2f, type: 3}
-  textObjects: []
+  textObjects:
+  - {fileID: 0}
+  - {fileID: 0}
   basicChunk: {fileID: 1748421094043380654}
   canContinue: 1
   defaultColor: {r: 0.8352942, g: 0.85098046, b: 0.9294118, a: 0}

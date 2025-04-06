@@ -27,7 +27,7 @@ public class Form1 : AbstractForm
     void Start()
     {
         if (responseSheet == null)
-            responseSheet = GameObject.Find("ResponseSheet").GetComponent<ResponseSheet>();
+            responseSheet = FindObjectOfType<ResponseSheet>();
         defaultColor = yesPet.color;
         canContinue = false;
         Debug.Log("Cancontinue: " + canContinue);
@@ -58,7 +58,8 @@ public class Form1 : AbstractForm
 
     public override void AnswerCheck()
     {
-        userName = inputField1.text;
+        responseSheet = null;
+        responseSheet = FindObjectOfType<ResponseSheet>();
         location = inputField2.text;
         if (hasPet == null)
         {
@@ -82,7 +83,7 @@ public class Form1 : AbstractForm
         }
         else
         {
-            responseSheet.Name = this.userName;
+            responseSheet.Name = inputField1.text;
             responseSheet.category = this.category;
             responseSheet.location = this.location;
             responseSheet.hasPet = this.hasPet;
