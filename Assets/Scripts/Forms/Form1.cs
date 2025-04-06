@@ -13,9 +13,10 @@ public class Form1 : AbstractForm
     public ToggleGroup categoryToggleGroup;
     public ToggleGroup quantumToggleGroup;
 
+
     public bool? hasPet = null;
     public bool? travelThroughEconomicZone = null;
-    public bool? quantum = null;
+    public bool? hasQuantum = null;
     public Image yesPet;
     public Image noPet;
     public string userName;
@@ -47,7 +48,7 @@ public class Form1 : AbstractForm
     public void QuantumToggleGroup(bool value)
     {
         TestYesOrNo(value, quantumToggleGroup);
-        quantum = value;
+        hasQuantum = value;
     }
 
     public void CategoryToggleGroup(string value)
@@ -67,7 +68,7 @@ public class Form1 : AbstractForm
         {
             canContinue = false;
         }
-        else if (quantum == null)
+        else if (hasQuantum == null)
         {
             canContinue = false;
         }
@@ -86,7 +87,7 @@ public class Form1 : AbstractForm
             responseSheet.location = this.location;
             responseSheet.hasPet = this.hasPet;
             responseSheet.travelThroughEconomicZone = this.travelThroughEconomicZone;
-            responseSheet.hasQuantum = this.quantum;
+            responseSheet.hasQuantum = this.hasQuantum;
             canContinue = true;
         }
 

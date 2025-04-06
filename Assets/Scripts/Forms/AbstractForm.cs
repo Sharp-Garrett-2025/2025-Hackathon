@@ -19,7 +19,7 @@ public abstract class AbstractForm : MonoBehaviour
         basicChunk = GetComponent<BasicChunk>();
     }
 
-    public void TestYesOrNo(bool value, ToggleGroup group)
+    public virtual void TestYesOrNo(bool value, ToggleGroup group)
     {
         var yesOrNo = value;
         if (yesOrNo == true)

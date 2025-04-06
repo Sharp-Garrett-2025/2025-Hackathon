@@ -18,11 +18,8 @@ public class Form3 : AbstractForm
 
     void Start()
     {
-        // foreach (var text in textObjects)
-        // {
-        //     var textComponent = text.GetComponent<TMP_InputField>();
-        //     textComponent.text = "";
-        // }
+        if (responseSheet == null)
+            responseSheet = GameObject.Find("ResponseSheet").GetComponent<ResponseSheet>();
         canContinue = false;
         Black = 0.0f;
         Red = 0.0f;
@@ -132,6 +129,9 @@ public class Form3 : AbstractForm
             image.color = Color.green;
             image = textObjects[4].GetComponent<Image>();
             image.color = Color.green;
+
+            responseSheet.pocketHoleTaxes = this.pocketHoleTaxes;
+            responseSheet.catGirlGambling = this.catGirlGambling;
             canContinue = true;
         }
 
