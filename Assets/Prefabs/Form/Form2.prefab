@@ -1063,16 +1063,36 @@ PrefabInstance:
       value: Form
       objectReference: {fileID: 0}
     - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8349829708907924311}
+    - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6146777102732391985}
     - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnFormPressed
       objectReference: {fileID: 0}
     - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AbstractForm, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009710856450594863, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1123,6 +1143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61994c2d13e8c743abace3e9451b9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  responseSheet: {fileID: 0}
   textObjects:
   - {fileID: 1132241180540094756}
   - {fileID: 3027168696241961881}
@@ -1140,6 +1161,11 @@ MonoBehaviour:
 --- !u!224 &5264350138549498084 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3196388495799068773, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
+  m_PrefabInstance: {fileID: 7301848928817436801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &6146777102732391985 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3465763853653290672, guid: 8c6eb7c0b00a62646887d0b734c983bf, type: 3}
   m_PrefabInstance: {fileID: 7301848928817436801}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8493732635062765622 stripped
