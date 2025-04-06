@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Captia2
       objectReference: {fileID: 0}
+    - target: {fileID: 2934933374713359611, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
+      propertyPath: m_TagString
+      value: Captcha
+      objectReference: {fileID: 0}
     - target: {fileID: 3254866341264298859, guid: ed47ae6ada91df5458f38ead666d1df8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
