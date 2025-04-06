@@ -130,22 +130,42 @@ public class FinalCalculations : MonoBehaviour
         if (scoreValue >= Random.Range(70, 100))
         {
             Ranks[0].SetActive(true);
+            Ranks[1].SetActive(false);
+            Ranks[2].SetActive(false);
+            Ranks[3].SetActive(false);
+            Ranks[4].SetActive(false);
         }
         else if (scoreValue >= Random.Range(50, 90))
         {
             Ranks[1].SetActive(true);
+            Ranks[0].SetActive(false);
+            Ranks[2].SetActive(false);
+            Ranks[3].SetActive(false);
+            Ranks[4].SetActive(false);
         }
         else if (scoreValue >= Random.Range(30, 70))
         {
             Ranks[2].SetActive(true);
+            Ranks[0].SetActive(false);
+            Ranks[1].SetActive(false);
+            Ranks[3].SetActive(false);
+            Ranks[4].SetActive(false);
         }
         else if (scoreValue >= Random.Range(10, 50))
         {
             Ranks[3].SetActive(true);
+            Ranks[0].SetActive(false);
+            Ranks[1].SetActive(false);
+            Ranks[2].SetActive(false);
+            Ranks[4].SetActive(false);
         }
         else
         {
             Ranks[4].SetActive(true);
+            Ranks[0].SetActive(false);
+            Ranks[1].SetActive(false);
+            Ranks[2].SetActive(false);
+            Ranks[3].SetActive(false);
         }
         string endingType;
         if(scoreValue>= 70)
