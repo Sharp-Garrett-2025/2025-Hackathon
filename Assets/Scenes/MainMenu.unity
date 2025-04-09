@@ -660,7 +660,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Two Devs and a Racoon
+  m_text: Two Devs and a Raccoon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c99c69a03438e2b469a0ed091a95470a, type: 2}
   m_sharedMaterial: {fileID: -5403029070661975905, guid: c99c69a03438e2b469a0ed091a95470a, type: 2}
